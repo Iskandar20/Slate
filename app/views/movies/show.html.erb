@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <h1 class="display-4"> <%= @movie.Movie %> </h1>
+  <p class="lead">Directed by: <strong><%= @movie.Director %></strong></p>
+  <p>Imdb rating:<strong> <%= @movie.IMDb_Rating %></strong></p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="<%= @movie.Wikipedia %>" role="button">Wikipedia</a>
+  </p>
+</div>
+
+<br/><br/>
+<%= link_to 'Edit', edit_movie_path(@movie),class:'btn btn-info' %> 
+<%= link_to 'Back', movies_path,class:'btn btn-danger' %>

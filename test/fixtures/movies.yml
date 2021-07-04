@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Movie: MyString
+  Director: MyString
+  IMDb_Rating: 1.5
+  Wikipedia: MyString
+
+two:
+  Movie: MyString
+  Director: MyString
+  IMDb_Rating: 1.5
+  Wikipedia: MyString

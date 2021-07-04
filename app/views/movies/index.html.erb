@@ -1,0 +1,38 @@
+<% if user_signed_in? %>
+
+<table class="table table-hover table-light table-striped">
+  <thead class="table-dark" >
+    <tr>
+      <th>Movie</th>
+      <th>Director</th>
+      <th>Imdb rating</th>
+      <th>Wikipedia</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movies.each do |movie| %>
+      <% if movie.user == current_user %>
+      <tr>
+        <td><%= movie.Movie %></td>
+        <td><%= movie.Director %></td>
+        <td><%= movie.IMDb_Rating %></td>
+        <td><%= link_to movie.Wikipedia, movie %></td>
+        <td><% movie.user_id%>
+        <td><%= link_to 'Delete', movie, method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-outline-danger btn-sm' %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if user_signed_in? %>
+<%= link_to 'New Movie', new_movie_path,class:"btn btn-success" %>
+<% end %>
+
+<% else %>
+  <h1> Hi!</h1>
+  Create your movie list now. Sign Up or Log In.
+<% end %>
