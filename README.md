@@ -1,4 +1,4 @@
-# List-Movie
+# Slate
 
 A mutliuser list management app hosted on heroku which keeps tracks of movies entered by the users. Users are not allowed to modify other users movie list for privacy purposes.
 
